@@ -9,5 +9,4 @@ public class TeammanagerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TeammanagerApplication.class, args);
 	}
-
 }
