@@ -18,6 +18,8 @@ public class Employee {
     @Column(nullable = false, updatable = false)
     private String employeeCode;
 
+    public Employee() {};
+
     public Employee(String email, String name, String jobTitle, String phone, String imageUrl, String employeeCode) {
         this.email = email;
         this.name = name;

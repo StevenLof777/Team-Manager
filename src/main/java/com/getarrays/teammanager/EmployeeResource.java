@@ -13,12 +13,12 @@ import java.util.List;
 public class EmployeeResource {
     private final EmployeeService employeeService;
 
-    public EmployeeResource(EmployeeService employeeService){
+    public EmployeeResource(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Employee>> getAllEmployees(){
+    public ResponseEntity<List<Employee>> getAllEmployees () {
         List<Employee> employees = employeeService.findAllEmployees();
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
