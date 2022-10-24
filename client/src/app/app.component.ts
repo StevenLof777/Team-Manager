@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 import { HttpErrorResponse } from '@angular/common/http'
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,14 +27,28 @@ export class AppComponent implements OnInit{
       }
     )
   }
+
+  public onAddEmployee(addForm: NgForm): void {
+    this.employeeService.addEmployee(addForm.value).subscribe(
+      (response: Employee) => {
+        console.log(response);
+        this.getEmployees();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message)
+      }
+    )
+  }
   
   public onOpenModal(employee: Employee, mode: string): void{
+    console.log("mode = " + mode)
     const container = document.getElementById('main-container');
     const button = document.createElement('button')
     button.type = "button";
     button.style.display = "none";
     button.setAttribute('data-toggle', 'modal');
     if (mode === 'add') {
+      console.log(button)
       button.setAttribute('data-target', '#addEmployeeModal')
     }
     if (mode === 'edit') {
@@ -41,10 +56,8 @@ export class AppComponent implements OnInit{
     }
     if (mode === 'delete') {
       button.setAttribute('data-target', '#deleteEmployeeModal')
-    } else {
-      container?.appendChild(button);
-      button.click();
     }
+    container?.appendChild(button);
+    button.click();
   }
-
 }
