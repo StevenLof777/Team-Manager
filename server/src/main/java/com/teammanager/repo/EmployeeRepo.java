@@ -1,6 +1,6 @@
-package com.getarrays.teammanager.repo;
+package com.teammanager.repo;
 
-import com.getarrays.teammanager.model.Employee;
+import com.teammanager.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

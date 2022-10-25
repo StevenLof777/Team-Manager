@@ -1,4 +1,4 @@
-package com.getarrays.teammanager.model;
+package com.teammanager.model;
 
 import org.springframework.lang.Nullable;
 

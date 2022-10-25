@@ -1,15 +1,17 @@
-package com.getarrays.teammanager.service;
+package com.teammanager.service;
 
-import com.getarrays.teammanager.exception.UserNotFoundException;
-import com.getarrays.teammanager.model.Employee;
-import com.getarrays.teammanager.repo.EmployeeRepo;
+import com.teammanager.exception.UserNotFoundException;
+import com.teammanager.model.Employee;
+import com.teammanager.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
     private final EmployeeRepo employeeRepo;
 

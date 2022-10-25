@@ -1,4 +1,4 @@
-package com.getarrays.teammanager;
+package com.teammanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
