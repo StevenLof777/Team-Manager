@@ -5,7 +5,6 @@ Fullstack team manager that allows users to add, edit, delete, and search team m
 ![Team Manager gif](./client/src/assets/TeamBuilder.gif)
 
 ## Tech Stack
----
 ### Client
 * Framework: Angular
 * CSS library: BootStrap
@@ -15,7 +14,6 @@ Fullstack team manager that allows users to add, edit, delete, and search team m
 * Database: MySQl
 
 ## Prerequisites for running locally
----
 
 You will need the following things to properly clone and run on your computer.
 
