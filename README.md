@@ -2,7 +2,7 @@
 
 Fullstack team manager that allows users to add, edit, delete, and search team members.
 
-![Team Manager gif](client\src\assets\TeamBuilder.gif)
+![Team Manager gif](./client/src/assets/TeamBuilder.gif)
 
 ## Tech Stack
 ---
